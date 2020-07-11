@@ -1,5 +1,7 @@
 package patterns.decorator;
 
+import patterns.builder.IceCreamBuilder;
+
 public abstract class IceCream {
   private final String description;
 
@@ -12,4 +14,8 @@ public abstract class IceCream {
   }
 
   public abstract double getPrice();
+
+  public static IceCreamBuilder builder(IceCream iceCream) {
+    return new IceCreamBuilder(iceCream);
+  }
 }

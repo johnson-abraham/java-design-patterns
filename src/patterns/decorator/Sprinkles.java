@@ -1,15 +1,16 @@
 package patterns.decorator;
 
 public class Sprinkles extends Topping {
-  private final IceCream iceCream;
+  public Sprinkles() {
+    super("Sprinkles");
+  }
 
   public Sprinkles(IceCream iceCream) {
-    super("Sprinkles");
-    this.iceCream = iceCream;
+    super(iceCream, "Sprinkles");
   }
 
   @Override
   public double getPrice() {
-    return 4.5 + iceCream.getPrice();
+    return 4.5 + getIceCream().getPrice();
   }
 }

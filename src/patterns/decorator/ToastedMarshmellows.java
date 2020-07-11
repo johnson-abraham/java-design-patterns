@@ -1,15 +1,16 @@
 package patterns.decorator;
 
 public class ToastedMarshmellows extends Topping {
-  private final IceCream iceCream;
+  public ToastedMarshmellows() {
+    super("Toasted Marshmellows");
+  }
 
   public ToastedMarshmellows(IceCream iceCream) {
-    super("Toasted Marshmellows");
-    this.iceCream = iceCream;
+    super(iceCream, "Toasted Marshmellows");
   }
 
   @Override
   public double getPrice() {
-    return 10 + iceCream.getPrice();
+    return 10 + getIceCream().getPrice();
   }
 }
