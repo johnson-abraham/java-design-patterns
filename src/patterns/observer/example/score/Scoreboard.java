@@ -1,4 +1,7 @@
-package patterns.observer;
+package patterns.observer.example.score;
+
+import patterns.observer.Observable;
+import patterns.observer.Observer;
 
 public class Scoreboard implements Observer<Integer> {
     public Scoreboard(Observable<Integer> observable) {
@@ -6,7 +9,7 @@ public class Scoreboard implements Observer<Integer> {
     }
 
     @Override
-    public void getNotified(Integer updatedValue) {
+    public void getNotification(Integer updatedValue) {
         System.out.println("Changed score in scoreboard: " + updatedValue);
     }
 }

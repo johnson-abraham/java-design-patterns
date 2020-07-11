@@ -1,4 +1,7 @@
-package patterns.observer;
+package patterns.observer.example.score;
+
+import patterns.observer.Observable;
+import patterns.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +26,7 @@ public class Score implements Observable<Integer> {
 
   @Override
   public void notifyObservers() {
-    observers.forEach(observer -> observer.getNotified(score));
+    observers.forEach(observer -> observer.getNotification(score));
   }
 
   @Override

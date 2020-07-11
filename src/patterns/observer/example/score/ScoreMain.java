@@ -1,6 +1,9 @@
-package patterns.observer;
+package patterns.observer.example.score;
 
-public class ObserverPatternMain {
+import patterns.observer.Observable;
+import patterns.observer.Observer;
+
+public class ScoreMain {
   public static void main(String... args) {
     Observable<Integer> observable = new Score();
     Observer<Integer> scoreboard = new Scoreboard(observable);
